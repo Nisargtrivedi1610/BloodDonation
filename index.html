@@ -1,0 +1,39 @@
+import time
+import pyfiglet
+from termcolor import colored
+
+def print_plain_sorry():
+    print("Sorry")
+
+def print_repeated_sorry(times):
+    for _ in range(times):
+        print("Sorry")
+
+def print_delayed_sorry(times, delay):
+    for _ in range(times):
+        print("Sorry")
+        time.sleep(delay)
+
+def print_ascii_art_sorry():
+    ascii_art = pyfiglet.figlet_format("Sorry")
+    print(ascii_art)
+
+def print_colored_sorry(color):
+    text = colored("Sorry", color, attrs=["bold"])
+    print(text)
+
+if __name__ == "__main__":
+    print("Plain Sorry:")
+    print_plain_sorry()
+    
+    print("\nRepeated Sorry:")
+    print_repeated_sorry(5)
+    
+    print("\nDelayed Sorry:")
+    print_delayed_sorry(5, 1)
+    
+    print("\nASCII Art Sorry:")
+    print_ascii_art_sorry()
+    
+    print("\nColored Sorry:")
+    print_colored_sorry("red")
